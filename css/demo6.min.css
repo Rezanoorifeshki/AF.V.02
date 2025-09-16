@@ -5442,7 +5442,7 @@ blockquote {
 }
 
     .btn-dark:active, .btn-dark:focus, .btn-dark:hover {
-        color: #fff;
+        color: #ffa372;
         border-color: #343434;
         background-color: #343434
     }
@@ -7873,7 +7873,7 @@ button.mfp-arrow {
 
 .container > .login-popup {
     margin: 0 auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1)
+    box-shadow: 0 0 10px #0001
 }
 
 .newsletter-popup {
@@ -10836,7 +10836,7 @@ aside + div .product-single .product-details {
 }
 
     .nav-tabs .nav-item .nav-link.active, .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-item:hover .nav-link {
-        color: #222
+        color: #ffa372
     }
 
 .nav-link {
