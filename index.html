@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <title>فروشگاه اَلو فیوز - خرید انواع فیوز و محصولات الکتریکی</title>
@@ -14,14 +15,14 @@
           crossorigin="anonymous">
     <link rel="preload" href="vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
           crossorigin="anonymous">
-          <link rel="icon" type="image/png" href="Logo/aloo-fiooz-ai-1#">
+          <link rel="icon" type="image/png" href="Logo/aloo-fiooz-ai-1.png">
     <script>
         WebFontConfig = {
             google: { families: ['vazir:400,500,600,700,800,900'] }
         };
         (function (d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = 'js/webfont.js';
+            wf.src = '{%static "afapp/"%}js/webfont.js';
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
@@ -46,10 +47,10 @@
     <!-- Main CSS File -->
     <link rel="stylesheet" type="text/css" href="css/demo6.min.css">
 </head>
-<body class="home">
+<body class="about-us">
     <div class="page-wrapper">
-        <h1 class="d-none"> فروشگاه اَلو فیوز </h1>
-          <header class="header header-border rtl text-right">
+         <h1 class="d-none"> فروشگاه  آنلاین اَلو فیوز </h1>
+        <header class="header header-border rtl text-right">
             <div class="header-middle sticky-header fix-top sticky-content has-center">
                 <div class="container">
                     <div class="header-right">
@@ -164,8 +165,8 @@
                 </div>
             </div>
         </header>
-        <!-- End of Header -->
-        <main class="main rtl text-right">
+        <!-- End Header -->
+       <main class="main rtl text-right">
             <div class="page-content">
 
                 <section class="intro-slider owl-carousel owl-theme owl-rtl row owl-dot-inner animation-slider owl-nav-arrow cols-1 appear-animate"
@@ -182,10 +183,9 @@
                         }
                     }
                 }">
-
                     <div class="intro-slide1 banner banner-fixed" style="background-color: #f6f6f6">
                         <figure>
-                            <img src="images/demos/demo6/slides/1#"  alt="  {{best_seller.name}}   - پرفروش این ماه" width="1903" height="650" />
+                            <img src="images/demos/demo6/slides/1.png"  alt="  {{best_seller.name}}   - پرفروش این ماه" width="1903" height="650" />
                         </figure>
                         <div class="container">
                             <div class="banner-content y-50 text-right rtl">
@@ -195,7 +195,7 @@
                                 }">
                                     <h4 class="banner-subtitle text-uppercase text-grey mb-2">پرفروش این ماه</h4>
                                     <h3 class="banner-title font-weight-bold ls-m">   {{best_seller.name}}    </h3>
-                                    <a href="/shopproduct/{{best_seller.id}}" class="btn btn-primary btn-link btn-underline" aria-label="مشاهده محصولات و انتخاب">
+                                    <a href="shopproduct.html" class="btn btn-primary btn-link btn-underline" aria-label="مشاهده محصولات و انتخاب">
 
                                         مشاهده و انتخاب<i class="d-icon-arrow-left"></i>
                                     </a>
@@ -210,7 +210,7 @@
                     </div>
                     <div class="intro-slide2 banner banner-fixed" style="background-color: #5A5957;">
                         <figure>
-                            <img src="images/demos/demo6/slides/2#" alt="{{item.name}} - محصول جدید" width="1903" height="650" />
+                            <img src="images/demos/demo6/slides/2.png" alt="{{item.name}} - محصول جدید" width="1903" height="650" />
                         </figure>
                         <div class="container">
                             <div class="banner-content y-50 ml-lg-auto rtl text-right">
@@ -220,7 +220,7 @@
                                 }">
                                     <h4 class="banner-subtitle text-primary text-uppercase">کالای جدید</h4>
                                     <h3 class="banner-title text-white font-weight-bold ls-m">    {{item.name}}      </h3>
-                                    <a href="/shopproduct/{{item.id}}" class="btn btn-white btn-link btn-underline">
+                                    <a href="shopproduct.html" class="btn btn-white btn-link btn-underline">
                                         مشاهده و خرید<i class="d-icon-arrow-left"></i>
                                     </a>
                                     <figure class="floating y-50" data-options='{"invertX":false,"invertY":false}'
@@ -246,7 +246,6 @@
                                         <a href="#" class="nav-filter font-weight-semi-bold"
                                            data-filter="."></a>
                                     </li>
-    
                                     <li>
                                         <a href="#" class="nav-filter font-weight-semi-bold"
                                            data-filter=".{{item.zirname}}"> {{item.name}} </a>
@@ -283,10 +282,11 @@
                                 <div class="product-wrap">
                                     <div class="product">
                                         <figure class="product-media" style="background-color: #f5f5f5;">
-                                            <a href="/shopproduct/{{item.id}}" title="مشاهده {{item.name}}">
+                                            <a href="shopproduct.html" title="مشاهده {{item.name}}">
                                                 <img src="{{item.image.url}}" alt="تصویر محصول {{item.name}}" width="280" height="315">
                                             </a>
                                             <div class="product-label-group">
+                                                
                                                 <label class="product-label label-new">جدید</label>
                                                 <label class="product-label label-sale">%{{item.discountpercentage}} تخفیف</label>
                                             </div>
@@ -299,23 +299,23 @@
                                                    title="اضافه به علاقه مندی"><i class="d-icon-heart"></i></a>
                                             </div>
                                             <div class="product-action">
-                                                <a href="/shopproduct/{{item.id}}" class="btn-product" title="مشاهده و انتخاب ">
+                                                <a href="shopproduct.html" class="btn-product" title="مشاهده و انتخاب ">
                                                     مشاهده و انتخاب
                                                 </a>
                                             </div>
                                         </figure>
                                         <div class="product-details rtl">
                                             <div class="product-cat">
-                                                <a href="/shopproduct/{{item.id}}"> {{item.category.name}} </a>
+                                                <a href="shopproduct.html"> {{item.category.name}} </a>
                                             </div>
                                             <h3 class="product-name">
-                                                <a href="/shopproduct/{{item.id}}"> {{item.name}}  </a>
+                                                <a href="shopproduct.html"> {{item.name}}  </a>
                                             </h3>
                                             <div class="product-price">
-                                              
+                                                
                                                 <ins class="new-price"> {{item.discountprice}} تومان</ins>
                                                 <del class="old-price"> {{item.price}} تومان</del>
-                                               
+                                                
                                                 <ins class="new-price"> {{item.price}} تومان</ins>
                                                
                                             </div>
@@ -329,8 +329,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                        </div>
+                           
                         <div class="text-center">
                             <a class="btn btn-outline btn-dark btn-load" href="ajax/ajax-products-demo6.html"
                                data-load-to="#products-grid">بیشتر</a>
@@ -391,8 +390,8 @@
                 </aside>
             </div>
         </main>
-        <!-- End of Main -->
-        <footer class="footer rtl text-right">
+        <!-- End Main -->
+       <footer class="footer rtl text-right">
             <div class="container">
                 <div class="footer-top">
                     <div class="row align-items-center">
@@ -469,8 +468,8 @@
                             <div class="widget widget-instagram">
                                 <h4 class="widget-title">نمادهای اعتماد الکترونیک</h4>
                                 <figure class="widget-body row">
-                                    <div class="nemad-box"><img src="{%static 'afapp/'%}images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
-                                    <div class="nemad-box"><img src="{%static 'afapp/'%}images/samandehi.png" alt="نماد ساماندهی"></div>
+                                    <div class="nemad-box"><img src="images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
+                                    <div class="nemad-box"><img src="images/samandehi.png" alt="نماد ساماندهی"></div>
                                 </figure>
                             </div>
                             <!-- End Instagram -->
@@ -495,7 +494,7 @@
                 <!-- End FooterBottom -->
             </div>
         </footer>
-        <!-- End of Footer -->
+        <!-- End Footer -->
     </div>
     <!-- Sticky Footer -->
     <div class="sticky-footer sticky-content fix-bottom rtl text-right">
@@ -522,9 +521,9 @@
         </div>
     </div>
     <!-- Scroll Top -->
-    <a id="scroll-top" href="#top" title="بازگشت به بالای صفحه" aria-label="بازگشت به بالا" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
+    <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
     <!-- MobileMenu -->
-    <div class="mobile-menu-wrapper">
+   <div class="mobile-menu-wrapper">
         <div class="mobile-menu-overlay">
         </div>
         <!-- End of Overlay -->
@@ -559,12 +558,13 @@
     <!-- newsletter-popup type2 -->
     <div class="newsletter-popup rtl newsletter-pop2 mfp-hide" id="newsletter-popup">
         <figure>
-            <img src="Logo/alofuse#" width="250" height="264" alt="لوگوی فروشگاه" />
+            <img src="Logo/alofuse.jpg" width="250" height="264" alt="لوگوی فروشگاه" />
         </figure>
         <div class="newsletter-content">
             <h2 class="font-weight-bolder">اولین نفری باشید که باخبر می‌شود!</h2>
             <p class="text-grey">همین حالا شماره موبایل خود را وارد کنید و از جدیدترین تخفیف‌ها و محصولات فروشگاه ما مطلع شوید.</p>
             <form action="#" method="post" class="input-wrapper input-wrapper-inline input-wrapper-round">
+              
                 <input type="tel" class="form-control" name="phone" placeholder="شماره موبایل خود را وارد کنید" aria-label="شماره موبایل" required pattern="09[0-9]{9}">
                 <button class="btn btn-dark" type="submit">ارسال</button>
             </form>
@@ -579,14 +579,11 @@
         </div>
     </div>
     <!-- Plugins JS File -->
-    <script src="vendor/jquery/jquery.min.js" defer></script>
-    <script src="vendor/elevatezoom/jquery.elevatezoom.min.js" defer></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js" defer></script>
-    <script src="vendor/jquery.floating/jquery.floating.min.js" defer></script>
-    <script src="vendor/owl-carousel/owl.carousel.min.js" defer></script>
-    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-    <script src="vendor/isotope/isotope.pkgd.min.js" defer></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery.count-to/jquery-numerator.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/owl-carousel/owl.carousel.min.js"></script>
     <!-- Main JS File -->
-    <script src="js/main.min.js" defer></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
