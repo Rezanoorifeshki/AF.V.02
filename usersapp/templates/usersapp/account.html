@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <title>  ورود حساب کاربری  </title>
-     <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی" />
+    <title> حساب کاربری-  الو فیوز </title>
+    <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی">
     <meta name="description" content="فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد. انواع فیوز، محافظ جان، و کنتورهای دیجیتال با کیفیت بالا و قیمت مناسب.">
-    <meta name="author"  content="الوفیوز">
+    <meta name="author" content="الوفیوز">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    <link rel="icon" type="image/png" href="static/images/icons/favicon.png">
     <script>
         WebFontConfig = {
             google: { families: ['vazir:400,500,600,700'] }
@@ -20,20 +20,29 @@
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
-    <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+    <script type="application/ld+json">
+    {
+       "@context": "https://schema.org",
+       "@type": "WebPage",
+       "name": "فروشگاه اَلو فیوز",
+       "description": "فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد.",
+       "url": "{{ request.build_absolute_uri }}"
+    }
+    </script>
+    <link rel="stylesheet" type="text/css" href="../../../static/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/vendor/animate/animate.min.css">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/vendor/sticky-icon/stickyicon.css">
     <!-- Font Vazir -->
-    <link href="fonts/vazir/font-vazir.css" rel="stylesheet" />
+    <link href="../../../static/fonts/vazir/font-vazir.css" rel="stylesheet" />
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="css/demo6.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../static/css/demo6.min.css">
 </head>
 <body>
     <div class="page-wrapper">
          <h1 class="d-none"> فروشگاه  آنلاین اَلو فیوز </h1>
-        <header class="header header-border rtl text-right">
+       <header class="header header-border rtl text-right">
             <div class="header-middle sticky-header fix-top sticky-content has-center">
                 <div class="container">
                     <div class="header-right">
@@ -43,10 +52,10 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li>
-                                    <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+                                    <a href="../../../coreapp/templates/coreapp/index.html"><i class="fas fa-home"></i> خانه</a>
                                 </li>
                                 <li >
-                                    <a href="shop.html"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
+                                    <a href="../../../shopapp/templates/shopapp/shop.html"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
                                     <ul>
                                         <li  >
                                             <a href="#"> فیوز مینیاتوری  </a>
@@ -61,16 +70,16 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="aboutus.html"><i class="fas fa-street-view"></i>  درباره ما </a>
+                                    <a href="../../../coreapp/templates/coreapp/aboutus.html"><i class="fas fa-street-view"></i>  درباره ما </a>
                                 </li>
                                 <li >
-                                        <li><a href="contactus.html"> <i class="fas fa-comments"></i> تماس با ما </a></li>
+                                        <li><a href="../../../coreapp/templates/coreapp/contactus.html"> <i class="fas fa-comments"></i> تماس با ما </a></li>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="header-center">
-                        <a href="/" class="logo">
+                        <a href="/static" class="logo">
                             <img src="# " alt="لوگوی فروشگاه الوفیوز" width="153" height="44" />
                         </a>
                         <!-- End of Logo -->
@@ -99,7 +108,7 @@
                             <div class="products scrollable">
                                 <div class="product product-cart">
                                     <figure class="product-media">
-                                        <a href="shopproduct.html">
+                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html">
                                             <img src="#" alt="##" width="80"
                                                 height="88" />
                                         </a>
@@ -108,7 +117,7 @@
                                         </button>
                                     </figure>
                                     <div class="product-detail">
-                                        <a href="shopproduct.html" class="product-name">   کنتور دیجتال تک فاز  </a>
+                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html" class="product-name">   کنتور دیجتال تک فاز  </a>
                                         <div class="price-box">
                                             
                                             <span class="product-price">1,700,000 تومان</span>
@@ -124,8 +133,8 @@
                             </div>
                             <!-- End of Cart Total -->
                             <div class="cart-action">
-                                <a href="cart.html" class="btn btn-dark btn-link">سبد خرید</a>
-                                <a href="checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
+                                <a href="../../../orderapp/templates/orderapp/cart.html" class="btn btn-dark btn-link">سبد خرید</a>
+                                <a href="../../../orderapp/templates/orderapp/checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
                             </div>
                             <!-- End of Cart Action -->
                         </div>
@@ -149,93 +158,178 @@
             </div>
         </header>
         <!-- End Header -->
-        <main class="main rtl text-right">
-            <div class="page-content mt-6 pb-2 mb-10">
-                <div class="container">
-                    <div class="login-popup">
-                        <div class="form-box">
-                            <div class="tab tab-nav-simple tab-nav-boxed form-tab">
-                                <ul class="nav nav-tabs nav-fill align-items-center border-no justify-content-center mb-5"
-                                    role="tablist">
-                                    <li class="nav-item">
-                                        <a class="nav-link active border-no lh-1 ls-normal" href="#signin">ورود </a>
-                                    </li>
-                                    <li class="delimiter">یا</li>
-                                    <li class="nav-item">
-                                        <a class="nav-link border-no lh-1 ls-normal" href="#register">  ثبت نام</a>
-                                    </li>
-                                </ul>
-                                <div class="tab-content">
-                                    <div class="tab-pane active" id="signin">
-                                        <form action="#">
-                                            <div class="form-group mb-3">
-                                                <input type="text" class="form-control text-left" id="singin-email"
-                                                    name="singin-email" placeholder="نام کاربری یا آدرس ایمیل"
-                                                    required />
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control text-left ltr" id="singin-password"
-                                                    name="singin-password" placeholder="رمز عبور" required />
-                                            </div>
-                                            <div class="form-footer">
-                                                <div class="form-checkbox">
-                                                    <input type="checkbox" class="custom-checkbox" id="signin-remember"
-                                                        name="signin-remember" />
-                                                    <label class="form-control-label" for="signin-remember">مرا به خاطر بسپار
-                                                        </label>
-                                                </div>
-                                                <a href="#" class="lost-link"> رمز عبور خود را فراموش کرده اید؟</a>
-                                            </div>
-                                            <button class="btn btn-dark btn-block btn-rounded"
-                                                type="submit">ورود</button>
-                                        </form>
-                                        <div class="form-choice text-center">
-                                            <label class="ls-m"> وارد شوید با</label>
-                                            <div class="social-links">
-                                                <a href="#"
-                                                    class="social-link social-google fab fa-google border-no"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane" id="register">
-                                        <form action="#">
-                                            <div class="form-group">
-                                                <input type="email" class="form-control text-left" id="register-email"
-                                                    name="register-email" placeholder="نام کاربری یا آدرس ایمیل" required />
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control text-left ltr" id="register-password"
-                                                    name="register-password" placeholder="رمز عبور" required />
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="password" class="form-control text-left ltr" id="register-password"
-                                                    name="register-password" placeholder=" تایید رمز عبور" required />
-                                            </div>
-                                            <button class="btn btn-dark btn-block btn-rounded"
-                                                type="submit">ثبت نام</button>
-                                        </form>
-                                        <div class="form-choice text-center">
-                                            <label class="ls-m"> ثبت نام با</label>
-                                            <div class="social-links">
-                                                <a href="#"
-                                                    class="social-link social-google fab fa-google border-no"></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+         <div style="text-align: center; background-color: rgb(192, 188, 185);">#</div>
+        <main class="main account rtl text-right">
+    <div class="page-content mt-4 mb-10 pb-6">
+        <div class="container">
+            <h2 class="title title-center mb-10"> حساب کاربری  </h2>
+            <div class="tab tab-vertical gutter-lg">
+                <ul class="nav nav-tabs mb-4 col-lg-3 col-md-4" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link text-right active" href="#dashboard">داشبورد</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-right" href="#orders">سفارشات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-right" href="#account"> پروفایل من </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-right" href="#logout">خروج</a>
+                    </li>
+                </ul>
+                <div class="tab-content col-lg-9 col-md-8">
+                    <div class="tab-pane active" id="dashboard">
+                       <h6> <p class="mb-0">
+                            سلام #
+                        </p></h6>
+                        <p class="mb-8">
+                        از داشبورد حساب خود می توانید سفارشات اخیر خود را مشاهده کنید.
+                                آدرس های حمل و نقل و صورتحساب خود را مدیریت کنید،
+                                <br>و رمز عبور و جزئیات حساب خود را ویرایش کنید.
+                            </a>
+                        </p>
+                        <a href="../../../shopapp/templates/shopapp/shop.html" class="btn btn-dark btn-rounded">
+                            رفتن به فروشگاه  <i class="d-icon-arrow-left"></i>
+                        </a>
+                    </div>
+                    <div class="tab-pane" id="orders">
+                        <table class="order-table">
+                            <thead>
+                                <tr>
+                                    <th class="pr-2">سفارش</th>
+                                    <th> تاریخ </th>
+                                    <th>وضعیت</th>
+                                    <th>جمع</th>
+                                    <th class="pl-2">اقدامات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="order-number"><a href="#">#3596</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته </span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number"><a href="#">#3593</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته</span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number"><a href="#">#2547</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته</span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number"><a href="#">#2549</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته</span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number"><a href="#">#4523</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته</span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="order-number"><a href="#">#4526</a></td>
+                                    <td class="order-date"><span>2 آبان 1402</span></td>
+                                    <td class="order-status"><span>درحال بارگیری</span></td>
+                                    <td class="order-total"><span>3میلیون تومان برای 5 بسته</span></td>
+                                    <td class="order-action">
+                                        <a href="#"
+                                           class="btn btn-primary btn-link btn-underline">نمایش </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="account">
+                        <form action="" class="form" method="post">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                <label>نام </label>
+                                <input type="text" class="form-control" name="first_name" value="#">
+                                <div class="error">3#</div>
                             </div>
-                        </div>
+                            <div class="col-sm-6">
+                                <label>نام خانوادگی</label>
+                                <input type="text" class="form-control" name="last_name" value="#">
+                                <div class="error">*</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>ایمیل </label>
+                                <input type="email" class="form-control" name="email" value="*">
+                                <div class="error">*</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>شماره تماس</label>
+                                <input type="text" class="form-control" name="phonenumber" value="*">
+                                <div class="error">*</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <label>کد پستی</label>
+                                <input type="text" class="form-control" name="postalcode" value="*">
+                                <div class="error">*</div>
+                            </div>
+                            <div >
+                                <label>آدرس</label>
+                                    <textarea class="form-control" name="address">*</textarea>
+                                <div class="error">*</div>
+                            
+                            </div>
+                            </div>
+                         
+                                <legend>تغییر پسورد</legend>
+                            
+                                <label for="current_password">رمز عبور فعلی (خالی بگذارید تا بدون تغییر باقی بماند)</label>
+                                <input type="password" class="form-control text-left ltr" name="current_password" id="current_password" value="*">
+                                <div class="error">*</div>
+                                <label for="new_password">رمز عبور جدید (خالی بگذارید تا بدون تغییر باقی بماند)</label>
+                                <input type="password" class="form-control text-left ltr" name="new_password" id="new_password" value="*">
+                                <div class="error">*</div>
+                                <label for="confirm_password">رمز عبور جدید را تایید کنید</label>
+                                <input type="password" class="form-control text-left ltr" name="confirm_password" id="confirm_password" value="*" >
+                                <div class="error">*</div>
+                            <button type="submit" class="btn btn-primary">ذخیره تغییرات</button>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
         </main>
         <!-- End Main -->
-       <footer class="footer rtl text-right">
+         <footer class="footer rtl text-right">
             <div class="container">
                 <div class="footer-top">
                     <div class="row align-items-center">
                         <div class="col-lg-3">
-                            <a href="index.html" class="logo-footer" aria-label="لوگوی فروشگاه الوفیوز">
+                            <a href="../../../coreapp/templates/coreapp/index.html" class="logo-footer" aria-label="لوگوی فروشگاه الوفیوز">
                                 <img src="#" alt="لوگوی فروشگاه الوفیوز" width="154" height="43" />
                             </a>
                             <!-- End FooterLogo -->
@@ -288,10 +382,10 @@
                                 <a href="login.html"><h4 class="widget-title">حساب کاربری</h4></a>
                                 <ul class="widget-body ">
                                     <li>
-                                        <a href="aboutus.html">درباره ما</a>
+                                        <a href="../../../coreapp/templates/coreapp/aboutus.html">درباره ما</a>
                                     </li>
                                     <li>
-                                        <a href="cart.html">  سبد خرید</a>
+                                        <a href="../../../orderapp/templates/orderapp/cart.html">  سبد خرید</a>
                                     </li>
                                 </ul>
                             </div>
@@ -337,7 +431,7 @@
     </div>
     <!-- Sticky Footer -->
     <div class="sticky-footer sticky-content fix-bottom rtl text-right">
-        <a href="index.html" class="sticky-link active" aria-label="بازگشت به خانه">
+        <a href="../../../coreapp/templates/coreapp/index.html" class="sticky-link active" aria-label="بازگشت به خانه">
             <i class="d-icon-home"></i>
             <span>خانه</span>
         </a>
@@ -362,7 +456,7 @@
     <!-- Scroll Top -->
     <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
     <!-- MobileMenu -->
-   <div class="mobile-menu-wrapper">
+    <div class="mobile-menu-wrapper">
         <div class="mobile-menu-overlay">
         </div>
         <!-- End of Overlay -->
@@ -372,21 +466,21 @@
             
             <ul class="mobile-menu mmenu-anim">
                 <li>
-                    <a href="/">صفحه اصلی</a>
+                    <a href="/static">صفحه اصلی</a>
                 </li>
                 <li>
                     <a href=# class="active">محصولات</a>
                     <ul>
                         <li>
-                        <a href="shop.html">#  </a>
+                        <a href="../../../shopapp/templates/shopapp/shop.html">#  </a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">سایر صفحات</a>
                     <ul>
-                        <li><a href="aboutus.html">درباره ما</a></li>
-                        <li><a href="contactus.html">تماس با ما</a></li>
+                        <li><a href="../../../coreapp/templates/coreapp/aboutus.html">درباره ما</a></li>
+                        <li><a href="../../../coreapp/templates/coreapp/contactus.html">تماس با ما</a></li>
                         <li><a href="login.html">حساب کاربری</a></li>
                     </ul>
                 </li>
@@ -394,12 +488,12 @@
             <!-- End of MobileMenu -->
         </div>
     </div>
-	<!-- Plugins JS File -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
-    <script src="vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <!-- Plugins JS File -->
+    <script src="../../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="../../../static/vendor/elevatezoom/jquery.elevatezoom.min.js"></script>
+    <script src="../../../static/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../../../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
     <!-- Main JS File -->
-    <script src="js/main.min.js"></script>
+    <script src="../../../static/js/main.min.js"></script>
 </body>
 </html>

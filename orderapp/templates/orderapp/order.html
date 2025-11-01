@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+{% block "title" %}
+	    <title> سفارشات محصولات </title>
+{% endblock "title" %}
+{% block "meta" %}
+    <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی" />
+    <meta name="description" content="فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد. انواع فیوز، محافظ جان، و کنتورهای دیجیتال با کیفیت بالا و قیمت مناسب.">
+    <meta name="author"  content="الوفیوز">
+{% endblock "meta" %}
+{% block "script" %}
+	<script type="application/ld+json">
+    {
+       "@context": "https://schema.org",
+       "@type": "WebPage",
+       "name": "فروشگاه اَلو فیوز",
+       "description": "فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد.",
+       "url": "{{ request.build_absolute_uri }}"
+    }
+    </script>
+{% endblock "script" %}
+{% block "main" %}
+		<main class="main order rtl text-right">
+			<div class="page-content pt-7 pb-10 mb-10">
+				<div class="step-by pr-4 pl-4">
+					<h3 class="title title-simple title-step"><a href="cart.html">1. سبد خرید</a></h3>
+					<h3 class="title title-simple title-step"><a href="checkout.html">2. صورت حساب</a></h3>
+					<h3 class="title title-simple title-step active"><a href="order.html">3. تکمیل خرید</a></h3>
+				</div>
+				<div class="container mt-8">
+					<div class="order-message mr-auto ml-auto">
+						<div class="icon-box d-inline-flex align-items-center">
+							<div class="icon-box-icon mb-0">
+								<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 50 50"
+									enable-background="new 0 0 50 50" xml:space="preserve">
+									<g>
+										<path fill="none" stroke-width="3" stroke-linecap="round"
+											stroke-linejoin="bevel" stroke-miterlimit="10" d="
+											M33.3,3.9c-2.7-1.1-5.6-1.8-8.7-1.8c-12.3,0-22.4,10-22.4,22.4c0,12.3,10,22.4,22.4,22.4c12.3,0,22.4-10,22.4-22.4
+											c0-0.7,0-1.4-0.1-2.1"></path>
+										<polyline fill="none" stroke-width="4" stroke-linecap="round"
+											stroke-linejoin="bevel" stroke-miterlimit="10" points="
+											48,6.9 24.4,29.8 17.2,22.3 	"></polyline>
+									</g>
+								</svg>
+							</div>
+							<div class="icon-box-content text-right">
+								<h6 class="icon-box-title font-weight-bold lh-2 mb-1"> از اعتماد شما سپاسگزاریم</h6>
+								<p class="lh-1 ls-m">  سفارش شما ثبت شده است</p>
+							</div>
+						</div>
+					</div>
+					<div class="order-results">
+						<div class="overview-item">
+							<span>شماره سفارش:</span>
+							<strong>4935</strong>
+						</div>
+						<div class="overview-item">
+							<span>وضعیت:</span>
+							<strong>در انتظار ارسال</strong>
+						</div>
+						<div class="overview-item">
+							<span> تاریخ  :</span>
+							<strong>2 آبان 1402</strong>
+						</div>
+						<div class="overview-item">
+							<span>ایمیل:</span>
+							<strong>mail@sample.com</strong>
+						</div>
+						<div class="overview-item">
+							<span> جمع:</span>
+							<strong> 5,500,000 تومان </strong>
+						</div>
+						<div class="overview-item">
+							<span>روش پرداخت:</span>
+							<strong>نقدی هنگام تحویل</strong>
+						</div>
+					</div>
+					<h2 class="title title-simple text-right pt-4 font-weight-bold text-uppercase">جزئیات فاکتور</h2>
+					<div class="order-details">
+						<table class="order-details-table">
+							<thead>
+								<tr class="summary-subtotal">
+									<td>
+										<h3 class="summary-subtitle">محصول</h3>
+									</td>
+									<td></td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="product-name">    فیوز مینیاتوری سه فاز <span> <i class="fas fa-times"></i>
+											1</span></td>
+									<td class="product-price"> 800,000 تومان </td>
+								</tr>
+								<tr>
+									<td class="product-name"> فیوز مینیاتوری تک فاز <span><i
+												class="fas fa-times"></i> 1</span></td>
+									<td class="product-price"> 770,000 تومان</td>
+								</tr>
+								<tr>
+									<td class="product-name"> فیوز مینیاتوری سه فاز + نول <span><i class="fas fa-times"></i>
+											2</span></td>
+									<td class="product-price"> تومان152.000 </td>
+								</tr>
+								<tr class="summary-subtotal">
+									<td>
+										<h4 class="summary-subtitle">جمع قبل از تخفیف:</h4>
+									</td>
+									<td class="summary-subtotal-price"> 5,500,000 تومان </td>
+								</tr>
+								<tr class="summary-subtotal">
+									<td>
+										<h4 class="summary-subtitle"> حمل و نقل:</h4>
+									</td>
+									<td class="summary-subtotal-price">ارسال رایگان  </td>
+								</tr>
+								<tr class="summary-subtotal">
+									<td>
+										<h4 class="summary-subtitle">روش پرداخت:</h4>
+									</td>
+									<td class="summary-subtotal-price">نقد هنگام تحویل</td>
+								</tr>
+								<tr class="summary-subtotal">
+									<td>
+										<h4 class="summary-subtitle"> جمع:</h4>
+									</td>
+									<td>
+										<p class="summary-total-price"> 5,500,000 تومان </p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<h2 class="title title-simple text-right pt-10 mb-2">آدرس مقصد</h2>
+					<div class="address-info pb-8 mb-6">
+						<p class="address-detail pb-2">
+							رضا  نوری<br>
+							 تهران پارس غربی ،
+							خیابان دانشگاه ،
+							دفتر فروش<br>
+							09121111111
+						</p>
+						<p class="email">mail@sample.com</p>
+					</div>
+					<a href="../../../shopapp/templates/shopapp/shop.html" class="btn btn-icon-right btn-dark btn-back btn-rounded btn-md mb-4">بازگشت به فروشگاه<i
+							class="d-icon-arrow-left"></i></a>
+				</div>
+			</div>
+		</main>
+{% endblock "main" %}

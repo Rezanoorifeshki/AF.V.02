@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-        <title>   تماس با ما </title>
-     <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی" />
-    <meta name="description" content="فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد. انواع فیوز، محافظ جان، و کنتورهای دیجیتال با کیفیت بالا و قیمت مناسب.">
-    <meta name="author"  content="الوفیوز">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png">
+    {% block "titel" %}
+    {% endblock "title" %}
+    {% block "meta" %}
+    {% endblock "meta" %}
+
+    <!-- Preload Font -->
+    <link rel="preload" href="{%static %}../../../static/fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{%static %}../../../static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+    <link rel="preload" href="{%static %}../../../static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+          crossorigin="anonymous">
+          <link rel="icon" type="image/png" href="Logo/aloo-fiooz-ai-1.png">
     <script>
         WebFontConfig = {
-            google: { families: ['vazir:400,500,600,700'] }
+            google: { families: ['vazir:400,500,600,700,800,900'] }
         };
         (function (d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = 'js/webfont.js';
+            wf.src = '{%static %}js/webfont.js';
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
-    <link rel="stylesheet" type="text/css" href="vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.min.css">
+     {% block "script" %}
+{% endblock "script" %}
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/animate/animate.min.css">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="vendor/sticky-icon/stickyicon.css">
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/sticky-icon/stickyicon.css">
     <!-- Font Vazir -->
-    <link href="fonts/vazir/font-vazir.css" rel="stylesheet" />
+    <link href="{%static %}../../../static/fonts/vazir/font-vazir.css" rel="stylesheet" />
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="css/demo6.min.css">
+    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/css/demo6.min.css">
 </head>
-<body class="contact-us">
+<body class="about-us">
     <div class="page-wrapper">
-        <h1 class="d-none"> فروشگاه  آنلاین اَلو فیوز </h1>
+         <h1 class="d-none"> فروشگاه  آنلاین اَلو فیوز </h1>
         <header class="header header-border rtl text-right">
             <div class="header-middle sticky-header fix-top sticky-content has-center">
                 <div class="container">
@@ -47,7 +55,7 @@
                                     <a href="index.html"><i class="fas fa-home"></i> خانه</a>
                                 </li>
                                 <li >
-                                    <a href="shop.html"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
+                                    <a href="../../../shopapp/templates/shopapp/shop.html"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
                                     <ul>
                                         <li  >
                                             <a href="#"> فیوز مینیاتوری  </a>
@@ -58,7 +66,7 @@
                                         <li  >
                                             <a href="#">  کنتور دیجتال  </a>
                                         </li>
-                                        
+
                                     </ul>
                                 </li>
                                 <li>
@@ -71,13 +79,13 @@
                         </nav>
                     </div>
                     <div class="header-center">
-                        <a href="/" class="logo">
+                        <a href="/static" class="logo">
                             <img src="# " alt="لوگوی فروشگاه الوفیوز" width="153" height="44" />
                         </a>
                         <!-- End of Logo -->
                     </div>
                     <div class="header-left">
-                        <a href="login.html" ><i class="fas fa-user"></i>ورود
+                        <a href="../../../usersapp/templates/usersapp/login.html" ><i class="fas fa-user"></i>ورود
                         </a>
                     &nbsp;                     &nbsp;
                     <span class="divider"></span>
@@ -100,7 +108,7 @@
                             <div class="products scrollable">
                                 <div class="product product-cart">
                                     <figure class="product-media">
-                                        <a href="shopproduct.html">
+                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html">
                                             <img src="#" alt="##" width="80"
                                                 height="88" />
                                         </a>
@@ -109,9 +117,9 @@
                                         </button>
                                     </figure>
                                     <div class="product-detail">
-                                        <a href="shopproduct.html" class="product-name">   کنتور دیجتال تک فاز  </a>
+                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html" class="product-name">   کنتور دیجتال تک فاز  </a>
                                         <div class="price-box">
-                                            
+
                                             <span class="product-price">1,700,000 تومان</span>
                                         </div>
                                     </div>
@@ -125,8 +133,8 @@
                             </div>
                             <!-- End of Cart Total -->
                             <div class="cart-action">
-                                <a href="cart.html" class="btn btn-dark btn-link">سبد خرید</a>
-                                <a href="checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
+                                <a href="../../../orderapp/templates/orderapp/cart.html" class="btn btn-dark btn-link">سبد خرید</a>
+                                <a href="../../../orderapp/templates/orderapp/checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
                             </div>
                             <!-- End of Cart Action -->
                         </div>
@@ -150,72 +158,10 @@
             </div>
         </header>
         <!-- End Header -->
-         <main class="main rtl text-right">
-            
-            <div class="page-header" style=" background-color: #57b7c6 ">
-                <h1 class="page-title font-weight-bold text-capitalize ls-l">تماس با ما</h1>
-            </div>
-            <div class="page-content mt-10 pt-7">
-                <section class="contact-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-4 col-sm-6 ls-m mb-4">
-                                <div class="grey-section d-flex align-items-center h-100">
-                                    <div>
-                                        <h4 class="mb-2 text-capitalize">آدرس فروشگاه</h4>
-                                        <p>
-                                                    #
-                                        </p>
-                                        <h4 class="mb-2 text-capitalize">تلفن فروشگاه</h4>
-                                        <p>
-                                            <a href="tel:#"> # </a>
-                                            
-                                        </p>
-                                        <h4 class="mb-2 text-capitalize">ایمیل فروشگاه</h4>
-                                        <p class="mb-4">
-                                            <a href="#">b #</a>
-                                                                                     
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-9 col-md-8 col-sm-6 d-flex align-items-center mb-4">
-                                <div class="w-100">
-                                    <form class="pl-lg-2" action="#">
-                                        <h4 class="ls-m font-weight-bold">ارتباط با ما</h4>
-                                        <p>
-                                            فیلد های ستاره دار الزامی هستند .
-                                        </p>
-                                        <div class="row mb-2">
-                                            <div class="col-12 mb-4">
-                                                <textarea class="form-control" required
-                                                          placeholder="متن*"></textarea>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
-                                                <input class="form-control" type="text" placeholder="نام *" required>
-                                            </div>
-                                            <div class="col-md-6 mb-4">
-                                                <input class="form-control text-left" type="email" placeholder="ایمیل *" required>
-                                            </div>
-                                        </div>
-                                        <button class="btn btn-dark btn-rounded">
-                                            ارسال پیام <i class="d-icon-arrow-left"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                
-                <!-- End Store Section -->
-
-               
-                <!-- End Map Section -->
-            </div>
-        </main>
+        {% block main %}
+        {% endblock main %}
         <!-- End Main -->
-        <footer class="footer rtl text-right">
+       <footer class="footer rtl text-right">
             <div class="container">
                 <div class="footer-top">
                     <div class="row align-items-center">
@@ -270,13 +216,13 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="widget ml-lg-4">
-                                <a href="login.html"><h4 class="widget-title">حساب کاربری</h4></a>
+                                <a href="../../../usersapp/templates/usersapp/login.html"><h4 class="widget-title">حساب کاربری</h4></a>
                                 <ul class="widget-body ">
                                     <li>
                                         <a href="aboutus.html">درباره ما</a>
                                     </li>
                                     <li>
-                                        <a href="cart.html">  سبد خرید</a>
+                                        <a href="../../../orderapp/templates/orderapp/cart.html">  سبد خرید</a>
                                     </li>
                                 </ul>
                             </div>
@@ -292,8 +238,8 @@
                             <div class="widget widget-instagram">
                                 <h4 class="widget-title">نمادهای اعتماد الکترونیک</h4>
                                 <figure class="widget-body row">
-                                    <div class="nemad-box"><img src="{%static 'afapp/'%}images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
-                                    <div class="nemad-box"><img src="{%static 'afapp/'%}images/samandehi.png" alt="نماد ساماندهی"></div>
+                                    <div class="nemad-box"><img src="../../../static/images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
+                                    <div class="nemad-box"><img src="../../../static/images/samandehi.png" alt="نماد ساماندهی"></div>
                                 </figure>
                             </div>
                             <!-- End Instagram -->
@@ -303,7 +249,7 @@
                 <!-- End FooterMiddle -->
                 <div class="footer-bottom">
                     <div class="footer-right">
-                        
+
                     </div>
                     <div class="footer-center">
                         <p class="copyright">    آکادمی هوشمند رضا  &copy;  کلیه حقوق محفوظ است .</p>
@@ -321,12 +267,12 @@
         <!-- End Footer -->
     </div>
     <!-- Sticky Footer -->
-   <div class="sticky-footer sticky-content fix-bottom rtl text-right">
+    <div class="sticky-footer sticky-content fix-bottom rtl text-right">
         <a href="index.html" class="sticky-link active" aria-label="بازگشت به خانه">
             <i class="d-icon-home"></i>
             <span>خانه</span>
         </a>
-        <a href="account.html" class="sticky-link" aria-label="مشاهده  حساب کاربری">
+        <a href="../../../usersapp/templates/usersapp/account.html" class="sticky-link" aria-label="مشاهده  حساب کاربری">
             <i class="d-icon-user"></i>
             <span>حساب کاربری</span>
         </a>
@@ -347,23 +293,23 @@
     <!-- Scroll Top -->
     <a id="scroll-top" href="#top" title="Top" role="button" class="scroll-top"><i class="d-icon-arrow-up"></i></a>
     <!-- MobileMenu -->
-    <div class="mobile-menu-wrapper">
+   <div class="mobile-menu-wrapper">
         <div class="mobile-menu-overlay">
         </div>
         <!-- End of Overlay -->
         <a class="mobile-menu-close" href="#" aria-label="بستن منوی موبایل"><i class="d-icon-times"></i></a>
         <!-- End of CloseButton -->
         <div class="mobile-menu-container scrollable">
-            
+
             <ul class="mobile-menu mmenu-anim">
                 <li>
-                    <a href="/">صفحه اصلی</a>
+                    <a href="/static">صفحه اصلی</a>
                 </li>
                 <li>
                     <a href=# class="active">محصولات</a>
                     <ul>
                         <li>
-                        <a href="shop.html">#  </a>
+                        <a href="../../../shopapp/templates/shopapp/shop.html">#  </a>
                         </li>
                     </ul>
                 </li>
@@ -372,68 +318,22 @@
                     <ul>
                         <li><a href="aboutus.html">درباره ما</a></li>
                         <li><a href="contactus.html">تماس با ما</a></li>
-                        <li><a href="login.html">حساب کاربری</a></li>
+                        <li><a href="../../../usersapp/templates/usersapp/login.html">حساب کاربری</a></li>
                     </ul>
                 </li>
             </ul>
             <!-- End of MobileMenu -->
         </div>
     </div>
+    <!-- newsletter-popup type2 -->
+    {% block newsletter %}
+    {% endblock newsletter %}
     <!-- Plugins JS File -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="vendor/jquery.gmap/jquery.gmap.min.js"></script>
+    <script src="{%static %}../../../static/vendor/jquery/jquery.min.js"></script>
+    <script src="{%static %}../../../static/vendor/jquery.count-to/jquery-numerator.min.js"></script>
+    <script src="{%static %}../../../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{%static %}../../../static/vendor/owl-carousel/owl.carousel.min.js"></script>
     <!-- Main JS File -->
-    <script src="js/main.min.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
-    <script>
-
-        /*
-        Map Settings
-
-            Find the Latitude and Longitude of your address:
-                - https://www.latlong.net/
-                - http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/
-
-        */
-
-        // Map Markers
-        var mapMarkers = [{
-            address: "New York, NY 10017",
-            html: "<strong>New York Office<\/strong><br>New York, NY 10017",
-            popup: true
-        }];
-
-        // Map Initial Location
-        var initLatitude = 40.75198;
-        var initLongitude = -73.96978;
-
-        // Map Extended Settings
-        var mapSettings = {
-            controls: {
-                draggable: !window.Riode.isMobile,
-                panControl: true,
-                zoomControl: true,
-                mapTypeControl: true,
-                scaleControl: true,
-                streetViewControl: true,
-                overviewMapControl: true
-            },
-            scrollwheel: false,
-            markers: mapMarkers,
-            latitude: initLatitude,
-            longitude: initLongitude,
-            zoom: 11
-        };
-
-        var map = $('#googlemaps').gMap(mapSettings);
-
-        // Map text-center At
-        var mapCenterAt = function (options, e) {
-            e.preventDefault();
-            $('#googlemaps').gMap("centerAt", options);
-        }
-
-    </script>
+    <script src="{%static %}../../../static/js/main.min.js"></script>
 </body>
 </html>
