@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    {% block "titel" %}
-    {% endblock "title" %}
-    {% block "meta" %}
-    {% endblock "meta" %}
+    {% block title %}
+    {% endblock title %}
+    {% block meta %}
+    {% endblock meta %}
 
     <!-- Preload Font -->
-    <link rel="preload" href="{%static %}../../../static/fonts/riode.ttf?5gap68" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="{%static %}../../../static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="{% static 'fonts/riode.ttf?5gap68' %}" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="{% static 'vendor/fontawesome-free/webfonts/fa-solid-900.woff2' %}" as="font" type="font/woff2"
           crossorigin="anonymous">
-    <link rel="preload" href="{%static %}../../../static/vendor/fontawesome-free/webfonts/fa-brands-400.woff2" as="font" type="font/woff2"
+    <link rel="preload" href="{% static 'vendor/fontawesome-free/webfonts/fa-brands-400.woff2' %}" as="font" type="font/woff2"
           crossorigin="anonymous">
           <link rel="icon" type="image/png" href="Logo/aloo-fiooz-ai-1.png">
     <script>
@@ -21,23 +22,23 @@
         };
         (function (d) {
             var wf = d.createElement('script'), s = d.scripts[0];
-            wf.src = '{%static %}js/webfont.js';
+            wf.src = "{% static  'js/webfont.js' %}";
             wf.async = true;
             s.parentNode.insertBefore(wf, s);
         })(document);
     </script>
-     {% block "script" %}
-{% endblock "script" %}
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/animate/animate.min.css">
+     {% block script %}
+{% endblock script %}
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/fontawesome-free/css/all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.min.css' %}">
     <!-- Plugins CSS File -->
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/magnific-popup/magnific-popup.min.css">
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/owl-carousel/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/vendor/sticky-icon/stickyicon.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/magnific-popup/magnific-popup.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/owl-carousel/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/sticky-icon/stickyicon.css' %}">
     <!-- Font Vazir -->
-    <link href="{%static %}../../../static/fonts/vazir/font-vazir.css" rel="stylesheet" />
+    <link href="{% static 'fonts/vazir/font-vazir.css' %}" rel="stylesheet" />
     <!-- Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{%static %}../../../static/css/demo6.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/demo6.min.css' %}">
 </head>
 <body class="about-us">
     <div class="page-wrapper">
@@ -52,10 +53,10 @@
                         <nav class="main-nav">
                             <ul class="menu">
                                 <li>
-                                    <a href="index.html"><i class="fas fa-home"></i> خانه</a>
+                                    <a href="{% url "coreapps:indexs" %}"><i class="fas fa-home"></i> خانه</a>
                                 </li>
                                 <li >
-                                    <a href="../../../shopapp/templates/shopapp/shop.html"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
+                                    <a href="{% url 'shopapps:shops' %}"><i class="fas fa-store-alt"></i> محصولات <i class="fas fa-angle-down"></i></a>
                                     <ul>
                                         <li  >
                                             <a href="#"> فیوز مینیاتوری  </a>
@@ -70,10 +71,10 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="aboutus.html"><i class="fas fa-street-view"></i>  درباره ما </a>
+                                    <a href="{% url 'coreapps:abouts' %}"><i class="fas fa-street-view"></i>  درباره ما </a>
                                 </li>
                                 <li >
-                                        <li><a href="contactus.html"> <i class="fas fa-comments"></i> تماس با ما </a></li>
+                                        <li><a href="{% url 'coreapps:contacts' %}"> <i class="fas fa-comments"></i> تماس با ما </a></li>
                                 </li>
                             </ul>
                         </nav>
@@ -85,7 +86,7 @@
                         <!-- End of Logo -->
                     </div>
                     <div class="header-left">
-                        <a href="../../../usersapp/templates/usersapp/login.html" ><i class="fas fa-user"></i>ورود
+                        <a href="{% url 'usersapps:logins' %}" ><i class="fas fa-user"></i>ورود
                         </a>
                     &nbsp;                     &nbsp;
                     <span class="divider"></span>
@@ -108,7 +109,7 @@
                             <div class="products scrollable">
                                 <div class="product product-cart">
                                     <figure class="product-media">
-                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html">
+                                        <a href="{% url 'shopapps:shopproducts' %}">
                                             <img src="#" alt="##" width="80"
                                                 height="88" />
                                         </a>
@@ -117,7 +118,7 @@
                                         </button>
                                     </figure>
                                     <div class="product-detail">
-                                        <a href="../../../shopapp/templates/shopapp/shopproduct.html" class="product-name">   کنتور دیجتال تک فاز  </a>
+                                        <a href="{% url 'shopapps:shopproducts' %}" class="product-name">   کنتور دیجتال تک فاز  </a>
                                         <div class="price-box">
 
                                             <span class="product-price">1,700,000 تومان</span>
@@ -133,8 +134,8 @@
                             </div>
                             <!-- End of Cart Total -->
                             <div class="cart-action">
-                                <a href="../../../orderapp/templates/orderapp/cart.html" class="btn btn-dark btn-link">سبد خرید</a>
-                                <a href="../../../orderapp/templates/orderapp/checkout.html" class="btn btn-dark"><span>پرداخت</span></a>
+                                <a href="{% url 'orderapps:carts' %}" class="btn btn-dark btn-link">سبد خرید</a>
+                                <a href="{% url 'orderapps:checkouts' %}" class="btn btn-dark"><span>پرداخت</span></a>
                             </div>
                             <!-- End of Cart Action -->
                         </div>
@@ -166,7 +167,7 @@
                 <div class="footer-top">
                     <div class="row align-items-center">
                         <div class="col-lg-3">
-                            <a href="index.html" class="logo-footer" aria-label="لوگوی فروشگاه الوفیوز">
+                            <a href="{% url "coreapps:indexs" %}" class="logo-footer" aria-label="لوگوی فروشگاه الوفیوز">
                                 <img src="#" alt="لوگوی فروشگاه الوفیوز" width="154" height="43" />
                             </a>
                             <!-- End FooterLogo -->
@@ -216,13 +217,13 @@
                         </div>
                         <div class="col-lg-3 col-md-6">
                             <div class="widget ml-lg-4">
-                                <a href="../../../usersapp/templates/usersapp/login.html"><h4 class="widget-title">حساب کاربری</h4></a>
+                                <a href="{% url 'usersapps:logins' %}"><h4 class="widget-title">حساب کاربری</h4></a>
                                 <ul class="widget-body ">
                                     <li>
-                                        <a href="aboutus.html">درباره ما</a>
+                                        <a href="{% url 'coreapps:abouts' %}">درباره ما</a>
                                     </li>
                                     <li>
-                                        <a href="../../../orderapp/templates/orderapp/cart.html">  سبد خرید</a>
+                                        <a href="{% url 'orderapps:carts' %}">  سبد خرید</a>
                                     </li>
                                 </ul>
                             </div>
@@ -238,8 +239,8 @@
                             <div class="widget widget-instagram">
                                 <h4 class="widget-title">نمادهای اعتماد الکترونیک</h4>
                                 <figure class="widget-body row">
-                                    <div class="nemad-box"><img src="../../../static/images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
-                                    <div class="nemad-box"><img src="../../../static/images/samandehi.png" alt="نماد ساماندهی"></div>
+                                    <div class="nemad-box"><img src="/images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
+                                    <div class="nemad-box"><img src="/images/samandehi.png" alt="نماد ساماندهی"></div>
                                 </figure>
                             </div>
                             <!-- End Instagram -->
@@ -268,11 +269,11 @@
     </div>
     <!-- Sticky Footer -->
     <div class="sticky-footer sticky-content fix-bottom rtl text-right">
-        <a href="index.html" class="sticky-link active" aria-label="بازگشت به خانه">
+        <a href="{% url "coreapps:indexs" %}" class="sticky-link active" aria-label="بازگشت به خانه">
             <i class="d-icon-home"></i>
             <span>خانه</span>
         </a>
-        <a href="../../../usersapp/templates/usersapp/account.html" class="sticky-link" aria-label="مشاهده  حساب کاربری">
+        <a href="{% url 'usersapps:accounts' %}" class="sticky-link" aria-label="مشاهده  حساب کاربری">
             <i class="d-icon-user"></i>
             <span>حساب کاربری</span>
         </a>
@@ -303,37 +304,34 @@
 
             <ul class="mobile-menu mmenu-anim">
                 <li>
-                    <a href="/static">صفحه اصلی</a>
+                    <a href="{% url "coreapps:indexs" %}">صفحه اصلی</a>
                 </li>
                 <li>
                     <a href=# class="active">محصولات</a>
                     <ul>
                         <li>
-                        <a href="../../../shopapp/templates/shopapp/shop.html">#  </a>
+                        <a href="{% url 'shopapps:shops' %}">#  </a>
                         </li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">سایر صفحات</a>
                     <ul>
-                        <li><a href="aboutus.html">درباره ما</a></li>
-                        <li><a href="contactus.html">تماس با ما</a></li>
-                        <li><a href="../../../usersapp/templates/usersapp/login.html">حساب کاربری</a></li>
+                        <li><a href="{% url 'coreapps:abouts' %}">درباره ما</a></li>
+                        <li><a href="{% url 'coreapps:contacts' %}">تماس با ما</a></li>
+                        <li><a href="{% url 'usersapps:logins' %}">حساب کاربری</a></li>
                     </ul>
                 </li>
             </ul>
             <!-- End of MobileMenu -->
         </div>
     </div>
-    <!-- newsletter-popup type2 -->
-    {% block newsletter %}
-    {% endblock newsletter %}
     <!-- Plugins JS File -->
-    <script src="{%static %}../../../static/vendor/jquery/jquery.min.js"></script>
-    <script src="{%static %}../../../static/vendor/jquery.count-to/jquery-numerator.min.js"></script>
-    <script src="{%static %}../../../static/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="{%static %}../../../static/vendor/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery.count-to/jquery-numerator.min.js' %}"></script>
+    <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
     <!-- Main JS File -->
-    <script src="{%static %}../../../static/js/main.min.js"></script>
+    <script src="{% static  'js/main.min.js' %}"></script>
 </body>
 </html>

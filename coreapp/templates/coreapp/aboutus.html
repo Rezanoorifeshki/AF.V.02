@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
-{% block "title" %}
+{% block title %}
         <title>  درباره ما </title>
-{% endblock "title" %}
-{% block "meta" %}
+{% endblock title %}
+{% block meta %}
     <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی" />
     <meta name="description" content="فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد. انواع فیوز، محافظ جان، و کنتورهای دیجیتال با کیفیت بالا و قیمت مناسب.">
     <meta name="author"  content="الوفیوز">
-{% endblock "meta" %}
-{% block "script" %}
+{% endblock meta %}
+{% block script %}
     <script type="application/ld+json">
     {
        "@context": "https://schema.org",
@@ -18,8 +18,8 @@
        "url": "{{ request.build_absolute_uri }}"
     }
     </script>
-{% endblock "script" %}
-{% block "main" %}
+{% endblock script %}
+{% block main %}
        <main class="main rtl text-right">
     <div class="page-header pl-4 pr-4" style=" background-color: #57b7c6 ">
         <h3 class="page-subtitle font-weight-bold">خوش آمدید به الو فیوز</h3>
@@ -37,7 +37,7 @@
                         <p class="section-desc text-grey" style="text-align: right;">
                           ##
                         </p>
-                        <a href="../../../shopapp/templates/shopapp/shopproduct.html" class="btn btn-dark btn-link btn-underline ls-m">
+                        <a href="{% url 'shopapps:shopproducts' %}" class="btn btn-dark btn-link btn-underline ls-m">
                             از محصولات ما دیدن کنید <i class="d-icon-arrow-left"></i>
                         </a>
                     </div>
@@ -47,4 +47,4 @@
         <!-- End About Section -->
     </div>
        </main>
-{% endblock "main" %}
+{% endblock main %}
