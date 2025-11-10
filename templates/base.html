@@ -15,7 +15,7 @@
           crossorigin="anonymous">
     <link rel="preload" href="{% static 'vendor/fontawesome-free/webfonts/fa-brands-400.woff2' %}" as="font" type="font/woff2"
           crossorigin="anonymous">
-          <link rel="icon" type="image/png" href="Logo/aloo-fiooz-ai-1.png">
+          <link rel="icon" type="image/png" href="{% static 'images/logo/aloo_fiooz_ai_1.png'%}">
     <script>
         WebFontConfig = {
             google: { families: ['vazir:400,500,600,700,800,900'] }
@@ -74,14 +74,15 @@
                                     <a href="{% url 'coreapps:abouts' %}"><i class="fas fa-street-view"></i>  درباره ما </a>
                                 </li>
                                 <li >
-                                        <li><a href="{% url 'coreapps:contacts' %}"> <i class="fas fa-comments"></i> تماس با ما </a></li>
+                                        <a href="{% url 'coreapps:contacts' %}"> <i class="fas fa-comments"></i> تماس با ما </a>
                                 </li>
                             </ul>
                         </nav>
                     </div>
                     <div class="header-center">
-                        <a href="/static" class="logo">
-                            <img src="# " alt="لوگوی فروشگاه الوفیوز" width="153" height="44" />
+                        <a href="{% url 'coreapps:indexs' %}" class="logo">
+
+                            <img src="{% static 'images/logo/Asset_1.png'%}" alt="لوگوی فروشگاه الوفیوز" width="153" height="44" />
                         </a>
                         <!-- End of Logo -->
                     </div>
@@ -168,7 +169,7 @@
                     <div class="row align-items-center">
                         <div class="col-lg-3">
                             <a href="{% url "coreapps:indexs" %}" class="logo-footer" aria-label="لوگوی فروشگاه الوفیوز">
-                                <img src="#" alt="لوگوی فروشگاه الوفیوز" width="154" height="43" />
+                                <img src="{% static 'images/logo/Asset_1.png'%}" alt="لوگوی فروشگاه الوفیوز" width="154" height="43" />
                             </a>
                             <!-- End FooterLogo -->
                         </div>
@@ -223,6 +224,9 @@
                                         <a href="{% url 'coreapps:abouts' %}">درباره ما</a>
                                     </li>
                                     <li>
+                                    <a href="{% url 'shopapps:wishlists' %}">   علاقه مندی ها </a>
+                                    </li>
+                                    <li>
                                         <a href="{% url 'orderapps:carts' %}">  سبد خرید</a>
                                     </li>
                                 </ul>
@@ -239,8 +243,8 @@
                             <div class="widget widget-instagram">
                                 <h4 class="widget-title">نمادهای اعتماد الکترونیک</h4>
                                 <figure class="widget-body row">
-                                    <div class="nemad-box"><img src="/images/enemad.png" alt="نماد اعتماد الکترونیک"></div>
-                                    <div class="nemad-box"><img src="/images/samandehi.png" alt="نماد ساماندهی"></div>
+                                    <div class="nemad-box"><img src="{% static 'images/enemad.png'%}" alt="نماد اعتماد الکترونیک"></div>
+                                    <div class="nemad-box"><img src="{% static 'images/samandehi.png'%}" alt="نماد ساماندهی"></div>
                                 </figure>
                             </div>
                             <!-- End Instagram -->
@@ -257,8 +261,9 @@
                     </div>
                     <div class="footer-left ">
                         <div class="social-links social-default pt-2 justify-content-center">
-                            <a href="#" class="social-link social-linkedin fab fa-instagram"></a>
+                            <a href="#" class="social-link social-instagram fab fa-instagram"></a>
                             <a href="#" class="social-link social-email far fa-envelope"></a>
+                            <a href="#" class="social-link social-whatsapp fab fa-whatsapp"></a>
                         </div>
                     </div>
                 </div>
@@ -307,7 +312,7 @@
                     <a href="{% url "coreapps:indexs" %}">صفحه اصلی</a>
                 </li>
                 <li>
-                    <a href=# class="active">محصولات</a>
+                    <a href="{% url 'shopapps:shops' %}" class="active">محصولات</a>
                     <ul>
                         <li>
                         <a href="{% url 'shopapps:shops' %}">#  </a>
@@ -320,6 +325,7 @@
                         <li><a href="{% url 'coreapps:abouts' %}">درباره ما</a></li>
                         <li><a href="{% url 'coreapps:contacts' %}">تماس با ما</a></li>
                         <li><a href="{% url 'usersapps:logins' %}">حساب کاربری</a></li>
+                        <li><a href="{% url 'shopapps:wishlists' %}">   علاقه مندی ها </a></li>
                     </ul>
                 </li>
             </ul>
@@ -327,10 +333,13 @@
         </div>
     </div>
     <!-- Plugins JS File -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/jquery.count-to/jquery-numerator.min.js' %}"></script>
+     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{%static 'vendor/elevatezoom/jquery.elevatezoom.min.js'%}" ></script>
     <script src="{% static 'vendor/magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{%static 'vendor/jquery.floating/jquery.floating.min.js'%}" ></script>
     <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{%static 'vendor/imagesloaded/imagesloaded.pkgd.min.js'%}" ></script>
+    <script src="{%static 'vendor/isotope/isotope.pkgd.min.js'%}" ></script>
     <!-- Main JS File -->
     <script src="{% static  'js/main.min.js' %}"></script>
 </body>

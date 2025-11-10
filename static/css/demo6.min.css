@@ -522,7 +522,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: black;
+    color: inherit;
     transition: color 0.3s
 }
 
@@ -19045,4 +19045,3 @@ aside .owl-nav-top .owl-nav {
                     top: 8rem;
                 }
               
-                

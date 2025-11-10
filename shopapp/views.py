@@ -6,3 +6,6 @@ def shop (request):
 
 def shopproduct (request):
     return render(request, 'shopapp/shopproduct.html')
+
+def wishlist (request):
+    return render(request, 'shopapp/wishlist.html')
