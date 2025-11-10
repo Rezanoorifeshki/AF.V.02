@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+    <title>  علاقه مندی</title>
+{% endblock title %}
+{% block meta %}
+    <meta name="keywords" content="فیوز مینیاتوری, محافظ جان, کنتور دیجیتال, فروشگاه محصولات الکتریکی, تخفیف محصولات الکتریکی" />
+    <meta name="description" content="فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد. انواع فیوز، محافظ جان، و کنتورهای دیجیتال با کیفیت بالا و قیمت مناسب.">
+    <meta name="author"  content="الوفیوز">
+{% endblock meta %}
+{% block script %}
+<script type="application/ld+json">
+    {
+       "@context": "https://schema.org",
+       "@type": "WebPage",
+       "name": "فروشگاه اَلو فیوز",
+       "description": "فروشگاه اَلو فیوز بهترین محصولات الکتریکی را با تخفیف‌های ویژه ارائه می‌دهد.",
+       "url": "{{ request.build_absolute_uri }}"
+    }
+    </script>
+{% endblock script %}
+{% block main %}
+        <main class="main rtl text-right">
+            <div class="page-content pt-10 pb-10 mb-2">
+                <div class="container">
+                    <table class="shop-table wishlist-table mt-2 mb-4">
+                        <thead>
+                            <tr>
+                                <th class="product-name"><span>محصول</span></th>
+                                <th></th>
+                                <th class="product-price"><span>قیمت</span></th>
+                                <th class="product-stock-status"><span>موجود در انبار</span></th>
+                                <th class="product-add-to-cart"></th>
+                                <th class="product-remove"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="wishlist-items-wrapper">
+                            <tr>
+                                <td class="product-thumbnail">
+                                    <a href="product-simple.html">
+                                        <figure>
+                                            <img src= "#" width="100" height="100"
+                                                 alt="#">
+                                        </figure>
+                                    </a>
+                                </td>
+                                <td class="product-name">
+                                    <a href="{% url 'shopapps:shopproducts' %}">  فیوز مینیاتوری سه فاز   </a>
+                                </td>
+                                <td class="product-price">
+                                    <span class="amount"> 800,000 تومان </span>
+                                </td>
+                                <td class="product-stock-status">
+                                    <span class="wishlist-in-stock">25 عدد در انبار</span>
+                                </td>
+                                <td class="product-add-to-cart">
+                                    <a href="{% url 'shopapps:shopproducts' %}" class="btn-product btn-primary"><span>مشاهده و انتخاب</span></a>
+                                </td>
+                                <td class="product-remove">
+                                    <div>
+                                        <a href="#" class="remove" title="حذف محصول"><i class="fas fa-times"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="social-links share-on">
+                        <h5 class=" font-weight-bold mb-0 mr-4 ls-s">صفحات اجتماعی ما : </h5>
+                        <a href="#" class="social-link social-icon social-email" title="Email">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link social-icon social-whatsapp" title="Whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-link social-icon social-instagram" title="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End Main -->
+{% endblock main %}
